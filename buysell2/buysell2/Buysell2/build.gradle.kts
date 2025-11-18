@@ -4,6 +4,8 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.7"
 }
 
+
+
 group = "com.example"
 version = "0.0.1-SNAPSHOT"
 description = "T-Bank project"
@@ -28,6 +30,10 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+	// Redmine Integration
+	implementation ("com.taskadapter:redmine-java-api:4.0.0.0")
+	implementation ("org.apache.httpcomponents:httpclient:4.5.14")
 }
 
 tasks.withType<Test> {
