@@ -1,0 +1,83 @@
+<tui-root>
+  <!-- Хедер -->
+  <header class="header">
+    <div class="header__left">
+      <span class="header__title">Бонусы</span>
+      <span class="header__subtitle">Маркетплейс</span>
+    </div>
+
+    <div class="header__right">
+      <!-- Баланс бонусов -->
+      <div class="balance">
+        <span class="balance__amount">12 450</span>
+        <span class="balance__currency">₽</span>
+      </div>
+
+      <!-- Корзина -->
+      <button tuiIconButton appearance="flat" size="m" class="cart-button" [routerLink]="['/cart']">
+        <tui-svg src="tuiIconShoppingCartLarge"></tui-svg>
+        <span class="cart-badge">3</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="main">
+    <h1 class="greeting">Привет!</h1>
+    <p class="subtitle">Трать бонусы с умом — выбирай лучшие предложения</p>
+
+    <!-- Товары -->
+    <section class="products">
+      <tui-island class="product-card">
+        <div class="product">
+          <img src="https://via.placeholder.com/120/FFD700/000000?text=OZON" alt="Ozon" class="product__image">
+          <div class="product__info">
+            <h3 class="product__title">Сертификат Ozon 5000 ₽</h3>
+            <p class="product__desc">На любую покупку в Ozon</p>
+            <div class="product__footer">
+              <div class="product__price">4 750 ₽</div>
+              <tui-badge status="warning" value="-5%"></tui-badge>
+            </div>
+            <button tuiButton appearance="primary" size="m" class="product__buy">В корзину</button>
+          </div>
+        </div>
+      </tui-island>
+
+      <tui-island class="product-card">
+        <div class="product">
+          <img src="https://via.placeholder.com/120/FF6600/FFFFFF?text=Я.Еда" alt="Яндекс.Еда" class="product__image">
+          <div class="product__info">
+            <h3 class="product__title">Яндекс.Еда — 1000 ₽</h3>
+            <p class="product__desc">Промокод на доставку еды</p>
+            <div class="product__footer">
+              <div class="product__price">900 ₽</div>
+            </div>
+            <button tuiButton appearance="primary" size="m" class="product__buy">В корзину</button>
+          </div>
+        </div>
+      </tui-island>
+
+      <!-- Можно добавить ещё товаров -->
+    </section>
+  </main>
+
+  <!-- Нижняя навигация -->
+  <nav class="bottom-nav">
+    <button routerLink="/" routerLinkActive="active" class="nav-item">
+      <tui-svg src="tuiIconHomeLarge"></tui-svg>
+      <span>Главная</span>
+    </button>
+    <button routerLink="/catalog" class="nav-item">
+      <tui-svg src="tuiIconGridLarge"></tui-svg>
+      <span>Каталог</span>
+    </button>
+    <button routerLink="/cart" class="nav-item">
+      <tui-svg src="tuiIconShoppingCartLarge"></tui-svg>
+      <span>Корзина</span>
+    </button>
+    <button routerLink="/orders" class="nav-item">
+      <tui-svg src="tuiIconClipboardLarge"></tui-svg>
+      <span>Заказы</span>
+    </button>
+  </nav>
+</tui-root>
